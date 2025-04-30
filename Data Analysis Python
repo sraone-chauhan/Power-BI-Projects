@@ -1,0 +1,38 @@
+import gspread
+import pandas as pd
+from oauth2client.service_account import ServiceAccountCredentials
+scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
+
+# Load credentials from the client secret file
+credentials = ServiceAccountCredentials.from_json_keyfile_name(r"C:\Users\sk11351\Documents\Phython Code automation\credentials-for-python-420507-8881094850ed.json", scope)
+
+# Authorize with Google Sheets API
+gc = gspread.authorize(credentials)
+
+# Open the Google Sheet by its URL
+sheet = gc.open_by_url('https://docs.google.com/spreadsheets/d/1L0KdifLZFu9UVlNyQYuyMt00aZKbBmQdV5tDZDdnaHk/edit?usp=sharing')
+
+# Get the first worksheet of the Google Sheet
+worksheet_open = sheet.get_worksheet(0)
+worksheet_close =sheet.get_worksheet(1)
+# Read all values from the worksheet
+data_open = worksheet_open.get_all_values()
+data_close = worksheet_close.get_all_values()
+
+# Convert data to a pandas DataFrame
+df_visit_open = pd.DataFrame(data_open[1:], columns=data_open[0])
+df_visit_open = df_visit_open.drop('Email Address', axis = 1)
+df_visit_open = df_visit_open.drop('Business_Pics', axis = 1)
+df_visit_open = df_visit_open.drop('Last_month_Bills', axis = 1)
+
+df_visit_close = pd.DataFrame(data_close[1:],columns=data_close[0])
+df_visit_close = df_visit_close.drop('Email Address', axis = 1)
+df_visit_close = df_visit_close.drop('Business_Pics', axis = 1)
+df_visit_close = df_visit_close.drop('Last_month_Bills', axis = 1)
+
+#print(df_visit_open)
+#print(df_visit_close)
+df_visit_close.info()
+
+df_visit_open.info()
+  
