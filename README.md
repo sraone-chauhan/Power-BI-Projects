@@ -1,6 +1,7 @@
 #Business Seasonality & Trend Analysis
 
-Replace screenshot.png with your exported report image
+[Replace screenshot.png with your exported report image
+](https://github.com/sraone-chauhan/Power-BI-Projects/blob/main/Business%20Seasonality%20%26%20Trend%20Analysis.png)
 
 ##Table of Contents
 
