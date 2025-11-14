@@ -1,0 +1,78 @@
+📊 Cashflow Dashboard – Power BI Project
+1. Description
+
+The Cashflow Dashboard is an interactive Power BI report designed to monitor, analyze, and visualize customer-level cashflow insights. It helps stakeholders understand the financial stability of customers by presenting loan-related inflows/outflows, business cash positions, and expense patterns in a structured and intuitive manner.
+The dashboard enables faster and more accurate decision-making during loan disbursement and risk assessment.
+
+2. Business Requirement
+
+The requirement was to build a unified reporting system that displays complete financial data of each customer, including business income, expenses, and cashflow trends.
+The goal was to create a single-page report that provides clear, real-time financial visibility for analysts, credit teams, and management.
+
+3. What It Solves
+
+Provides end-to-end cashflow analysis for every customer.
+
+Eliminates manual calculations and fragmented Excel/Google Sheet reports.
+
+Supports better loan approval decisions based on true financial capability.
+
+Helps in identifying risk patterns and ensuring accuracy during loan disbursement.
+
+Offers a clean, consolidated, and interactive report for quick insights.
+
+4. Data Sources
+
+SQL Server (primary customer & financial data)
+
+Google Sheets (operational inputs / updated customer info)
+
+SharePoint (uploaded financial statements / additional data files)
+
+5. Key Features
+
+🔹 Customer-level cash inflow & outflow trends
+
+🔹 Monthly and yearly cashflow comparison
+
+🔹 Income–expense breakdown
+
+🔹 Net cash position indicator
+
+🔹 Dynamic filters (customer, region, branch, time period)
+
+🔹 Drill-through pages for detailed customer profile
+
+🔹 Automated data refresh through Power BI Service
+
+🔹 Clean, business-ready UI/UX for stakeholders
+
+6. Tools & Technologies
+
+Power BI Desktop
+
+Power BI Service
+
+SQL Server
+
+Excel / Google Sheets
+
+SharePoint
+
+DAX for KPIs and measures
+
+Power Query (M Query) for ETL processes
+
+7. How to Use
+
+Open the .pbix file in Power BI Desktop.
+
+Update the data source connections (SQL Server / SharePoint / Google Sheet).
+
+Refresh the report to load the latest data.
+
+Use the slicers (Customer, Branch, Month, Product Type) to filter insights.
+
+Publish to Power BI Service for automated refresh and sharing.
+
+Share the dashboard with business users for real-time monitoring.
